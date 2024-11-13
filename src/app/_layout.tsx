@@ -1,12 +1,14 @@
 import { DefaultTheme, Theme, ThemeProvider } from '@react-navigation/native';
 import { Slot } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import 'react-native-reanimated';
+import { Provider } from 'react-redux';
 
 import { AnimatedBootSplash, ToastHost } from '@/src/components';
 import { Color, tw } from '@/src/config';
+import { store } from '@/src/store';
 
 const theme: Theme = {
   dark: false,
@@ -27,10 +29,12 @@ export default function RootLayout() {
     <>
       <StatusBar barStyle={'dark-content'} />
       <GestureHandlerRootView style={tw`flex-1`}>
-        <ThemeProvider value={theme}>
-          <ToastHost />
-          <Slot />
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider value={theme}>
+            <ToastHost />
+            <Slot />
+          </ThemeProvider>
+        </Provider>
         {splashVisible && (
           <AnimatedBootSplash
             isReady={true}
