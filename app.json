@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "movietime",
+    "slug": "movietime",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "movietime",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.movietime"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.appMaster",
+      "permissions": [
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Cairo-Bold.ttf",
+            "./assets/fonts/Cairo-ExtraBold.ttf",
+            "./assets/fonts/Cairo-ExtraLight.ttf",
+            "./assets/fonts/Cairo-Light.ttf",
+            "./assets/fonts/Cairo-Medium.ttf",
+            "./assets/fonts/Cairo-Regular.ttf",
+            "./assets/fonts/Cairo-Semibold.ttf"
+          ]
+        }
+      ],
+      "expo-router",
+      [
+        "react-native-bootsplash",
+        {
+          "assetsDir": "assets/bootsplash"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
