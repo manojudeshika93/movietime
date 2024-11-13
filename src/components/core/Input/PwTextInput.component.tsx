@@ -38,7 +38,7 @@ export const PwTextInput = forwardRef<RNTextInput, TextInputProps>(function AppT
       success={success}
       secureTextEntry={secureText}
       {...props}
-      renderLeft={
+      renderRight={
         <Pressable onPress={() => setSecureText(!secureText)}>
           <HidePwIcon color={secureText ? tw.color('neutral-dark-400') : tw.color('primary1')} />
         </Pressable>

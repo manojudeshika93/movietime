@@ -1,7 +1,7 @@
 import { Redirect, Stack } from 'expo-router';
 
 export default function InsideLayout() {
-  if (false) {
+  if (true) {
     return <Redirect href="/auth/login" />;
   }
 

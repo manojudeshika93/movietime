@@ -15,6 +15,7 @@ export default function AuthStack() {
       initialRouteName="login"
       screenOptions={{
         headerShown: false,
+        contentStyle: tw`pt-[${insets.top}px] pb-[${insets.bottom}px]`,
       }}>
       <Stack.Screen name="login" />
     </Stack>

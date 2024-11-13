@@ -81,7 +81,7 @@ export const TextInput = forwardRef<RNTextInput, TextInputProps>(function AppTex
             handleFocus();
             onFocus && onFocus(e);
           }}
-          textAlign="right"
+          // textAlign="right"
           textAlignVertical="center"
           maxLength={maxLength}
           {...props}
